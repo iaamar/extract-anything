@@ -23,5 +23,5 @@ modal-auth:
 	uv run modal setup
 	uv run modal token new
 
-modal-deploy-lamma:
+modal-deploy-llama:
 	uv run modal deploy llama_modal/llama_3_2_11b.py
