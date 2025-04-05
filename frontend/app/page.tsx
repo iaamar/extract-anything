@@ -46,10 +46,7 @@ export default function Home() {
 
 
       const response = await fetchSSE<partial_types.Schema, Schema>("http://localhost:8000/generate_baml/stream", formData, (onPartial) => {
-        setGeneratedBAML({
-          interface_code: onPartial.interface_code ?? "",
-          return_type: onPartial.return_type ?? "",
-        })
+        console.log("Partial response:", onPartial)
       })
 
       setGeneratedBAML({

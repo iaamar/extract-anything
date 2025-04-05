@@ -1,7 +1,7 @@
 # If you are using baml with vertexai (not google ai studio), you need to export creds from gcp and add them here
 # or hardcode them in clients.baml
-# import os
-# os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/path/to/vertex-creds.json"
+import os
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "extract-anything.json"
 
 import asyncio
 import json

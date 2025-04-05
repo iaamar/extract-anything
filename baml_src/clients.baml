@@ -5,8 +5,7 @@ client<llm> Llama32_11b_vision {
   options {
     model "neuralmagic/Llama-3.2-11B-Vision-Instruct-FP8-dynamic"
     api_key "super-secret-key"
-    // You need to set your modal app url here
-    base_url "{YOUR_MODAL_APP_URL}/v1"
+    base_url "https://iaamar--llama-3-2-11b-vision-serve.modal.run/v1"
     temperature 0.0
     seed 42
   }
@@ -17,7 +16,7 @@ client<llm> Gemini20Flash {
   provider vertex-ai
   options {
     model gemini-2.0-flash-001
-    project_id YOUR_GCP_PROJECT
+    project_id extract-anything
     location us-central1
     generation_config {
       temperature 0.0
@@ -25,6 +24,20 @@ client<llm> Gemini20Flash {
     }
   }
 }
+
+client<llm> GeminiPublic {
+  provider vertex-ai
+  options {
+    model "publishers/google/models/gemini-1.5-flash-001"
+    project_id extract-anything
+    location us-central1
+    generation_config {
+      temperature 0.0
+      seed 42
+    }
+  }
+}
+
 
 client<llm> CustomGPT4o {
   provider openai
